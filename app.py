@@ -335,6 +335,12 @@ while True:
         if is_logged == False:
             print("your email or password not correct please try again")
         break
-
 #####################End of second choice Login###########################
+
 ################If user didn't choose either to login nor register ################
+    elif select == "3":
+        break
+    else:
+        select = input("You have to choose between 1 , 2 , or 3: ")
+
+################Logic ends Here ################
