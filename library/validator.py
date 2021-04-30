@@ -1,6 +1,4 @@
 import re
-
-
 class Validator:
     def check_username(self, username):
         if username is None or username.isdigit():
