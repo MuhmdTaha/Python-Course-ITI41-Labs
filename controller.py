@@ -14,13 +14,13 @@ class User:
 
 class Project:
 
-    def __init__(self, title, details, target, start_time, end_time, author_email):
+    def __init__(self, title, details, target, start_time, end_time, owner_email):
         self.title = title
         self.details = details
         self.target = target
         self.start_time = start_time
         self.end_time = end_time
-        self.author_email = author_email
+        self.owner_email = owner_email
 
 
 class Controller:
@@ -98,7 +98,7 @@ class Controller:
         all_projects = self.model.get_all_projects()
         for project in all_projects:
             project = json.loads(project)
-            if project.get("author_email") == owner.get("email") and project.get("title") == project_title:
+            if project.get("owner_email") == owner.get("email") and project.get("title") == project_title:
                 return True
 
         return False
