@@ -1,16 +1,1 @@
-[
-    {
-        "first_name": "Muhammad",
-        "last_name": "Taha",
-        "email": "muhammadtahagad@gmail.com",
-        "password": "123",
-        "phone": "01068290304"
-    },
-    {
-        "first_name": "Muhammad",
-        "last_name": "Ahmed",
-        "email": "Mo@gmail.com",
-        "password": "412",
-        "phone": "01280459234"
-    }
-]
+[{"first_name": "Muhammad", "last_name": "Taha", "email": "muhammadtahagad@gmail.com", "password": "123", "phone": "01068290304"}, {"first_name": "Muhammad", "last_name": "Ahmed", "email": "Mo@gmail.com", "password": "412", "phone": "01280459234"}, {"first_name": "Mohamed", "last_name": "Taha", "email": "mohamed@yahoo.com", "password": "1234", "phone": "01231241244"}]
