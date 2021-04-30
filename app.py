@@ -116,8 +116,7 @@ while True:
                         while True:
                             start_time = input("Enter Project Start Time: ")
                             try:
-                                datetime.datetime.strptime(
-                                    start_time, '%Y-%m-%d')
+                                datetime.datetime.strptime(start_time, '%Y-%m-%d')
                                 new_project["start_time"] = start_time
                                 break
                             except ValueError:
@@ -126,8 +125,7 @@ while True:
                         while True:
                             end_time = input("Enter Project End Time: ")
                             try:
-                                datetime.datetime.strptime(
-                                    end_time, '%Y-%m-%d')
+                                datetime.datetime.strptime(end_time, '%Y-%m-%d')
                                 new_project["end_time"] = end_time
                                 break
                             except ValueError:
@@ -137,14 +135,14 @@ while True:
 
                         print("="*50)
 
-                        db = open("projectsdb.json", 'r')
+                        db = open("projects.json", 'r')
                         data = db.read()
                         db.close()
 
                         projects = json.loads(data)
                         projects.append(new_project)
 
-                        db = open("projectsdb.json", 'w')
+                        db = open("projects.json", 'w')
                         db.write(json.dumps(projects))
                         db.close()
 
@@ -152,7 +150,7 @@ while True:
                     elif sub_menu_select == "2":
                         print("View All Projects")
                         print("="*50)
-                        db = open("projectsdb.json", 'r')
+                        db = open("projects.json", 'r')
                         data = db.read()
                         db.close()
 
@@ -166,7 +164,7 @@ while True:
                             print(f"Total Target: {project['total_target']}")
                             print(f"Start Time: {project['start_time']}")
                             print(f"End Time: {project['end_time']}")
-                            print(f"author: {project['author']}")
+                            print(f"Author: {project['author']} ")
                             print("="*50)
 
                         break
@@ -176,7 +174,7 @@ while True:
 
                         project_title = input("Enter Project Title To Edit: ")
 
-                        db = open("projectsdb.json", 'r')
+                        db = open("projects.json", 'r')
                         data = db.read()
                         db.close()
 
@@ -228,13 +226,11 @@ while True:
                                 if end_time:
                                     while True:
                                         try:
-                                            datetime.datetime.strptime(
-                                                end_time, '%Y-%m-%d')
+                                            datetime.datetime.strptime(end_time, '%Y-%m-%d')
                                             project["end_time"] = end_time
                                             break
                                         except ValueError:
-                                            print(
-                                                "Incorrect data format, should be YYYY-MM-DD")
+                                            print("Incorrect data format, should be YYYY-MM-DD")
 
                                         end_time = input(
                                             "Enter New End Time or press enter to skip it: ")
@@ -244,7 +240,7 @@ while True:
 
                                 print("="*50)
 
-                                db = open("projectsdb.json", 'w')
+                                db = open("projects.json", 'w')
                                 db.write(json.dumps(projects))
                                 db.close()
                                 print("Project Edited successfully")
@@ -261,7 +257,7 @@ while True:
                         project_title = input(
                             "Enter Project Title To Delete: ")
 
-                        db = open("projectsdb.json", 'r')
+                        db = open("projects.json", 'r')
                         data = db.read()
                         db.close()
 
@@ -275,7 +271,7 @@ while True:
 
                                 projects.pop(index)
 
-                                db = open("projectsdb.json", 'w')
+                                db = open("projects.json", 'w')
                                 db.write(json.dumps(projects))
                                 db.close()
                                 print("Project Deleted successfully")
@@ -296,7 +292,7 @@ while True:
                                 datetime.datetime.strptime(
                                     project_start_date, '%Y-%m-%d')
 
-                                db = open("projectsdb.json", 'r')
+                                db = open("projects.json", 'r')
                                 data = db.read()
                                 db.close()
 
