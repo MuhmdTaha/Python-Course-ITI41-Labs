@@ -1,0 +1,36 @@
+this is my string of problem 1 and has some vowels
+Please enter a string: your string has 12 vowels ! 
+
+[15, 16, 17, 18]
+
+Please enter your array of numbers: [5, 7, 9, 4, 3, 6, 78, 41, 2]
+Array in asc order   [2, 3, 4, 5, 6, 7, 9, 41, 78]
+Array in desc order  [78, 41, 9, 7, 6, 5, 4, 3, 2]
+
+Please enter a number:9
+Fizz
+
+my mame is muhammad
+enter any string to be reversed: dammahum si eman ym
+Enter the radius of the circle:7
+Area of circle is: 153.93804002589985, and its circumference is: 43.982297150257104
+
+please enter your name: Please enter your Email: This is your name muhammad, and this is your email mohamed@yahoo.com
+
+mohamed
+-
+10
+taha
+4214
+mohamed@453
+mohamed@gmail.com
+
+please enter your name: Please enter your Email: Invalid Email
+Please enter your Email: Invalid Email
+Please enter your Email: Invalid Email
+Please enter your Email: Invalid Email
+Please enter your Email: Invalid Email
+Please enter your Email: This is your name mohamed, and this is your email mohamed@gmail.com
+
+ITI Problem, how many iti occurs in this string? iti is one of the best environments  
+please enter a string which contain an iti word: This is the number of iti word in your string: 2
