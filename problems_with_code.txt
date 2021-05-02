@@ -1,0 +1,204 @@
+
+############################### LAB-01 TASK-01 ######################################
+
+# 1 - Write a program that counts up the number of vowels [a, e, i, o, u]
+# contained in the string
+
+############################### START  TASK 1  #######################################
+
+def count_vowels(string):
+
+    number_of_vowels = 0
+    list_of_vowels = ["a", "e", "i", "o", "u"]
+    for char in string:
+        if char in list_of_vowels:
+            number_of_vowels += 1
+
+    print(f"your string has {str(number_of_vowels)} vowels ! ")
+
+usr_input = input("Please enter a string: ")
+count_vowels(usr_input)
+
+############################### END OF TASK 1  #########################################
+############################### LAB-01 TASK-02 ##############################################
+
+# 2 - Write a function that accepts two arguments (length, start) to generate
+# an array of a specific length filled with integer numbers increased by one
+# from start.
+
+############################### START  TASK 2 ###############################################
+
+def generate_arr(length, start):
+    result_arr = []
+    for counter in range(length):
+        result_arr.append(start)
+        start += 1
+    return result_arr
+
+user_length = 4
+user_start = 15
+print(generate_arr(user_length, user_start))
+
+############################### END OF TASK 2 ###############################################
+
+
+
+
+############################### LAB-01 TASK-03 ##############################################
+
+# 3 - Fill an array of 5 elements from the user, Sort it in descending and
+# ascending orders then display the output
+
+############################### START  TASK 3  ###############################################
+
+def sort_array(array):
+    asc_sorted_array = array[:]
+    asc_sorted_array.sort()
+
+    desc_sorted_array = array[:]
+    desc_sorted_array.sort(reverse=True)
+    print(f"Array in asc order   {asc_sorted_array}")
+    print(f"Array in desc order  {desc_sorted_array}")
+
+user_array = list(map(int, input("Please enter your array of numbers: ").split()))
+print(user_array)
+sort_array(user_array)
+
+
+############################### END OF TASK 3  ###############################################
+
+
+
+
+############################### LAB-01 TASK-04 ##############################################
+
+# 4 - write a function that takes a number as an argument and if the number
+# divisible by 3 return "Fizz" and if it is divisible by 5 return "buzz" and if is is
+# divisible by both return "FizzBuzz"
+
+
+############################### START  TASK 4 ################################################
+
+def fizz_buzz(number):
+
+    if number % 3 == 0 and number % 5 == 0:
+        return 'FizzBuzz'
+    elif number % 3 == 0:
+        return 'Fizz'
+    elif number % 5 == 0:
+        return 'Buzz'
+    else:
+        print(f"your number doesn't fit! try another number")
+        return 0
+
+
+print(fizz_buzz(int(input("Please enter a number: "))))
+
+
+############################### END OF TASK 4 ################################################
+############################### LAB-01 TASK-05 ##############################################
+
+# 5 - Write a function which has an input of a string from user then it will
+# return the same string reversed
+
+############################### START  TASK 5  ##############################################
+
+string_input = input("enter any string to be reversed: ")
+string_input = string_input.lower()
+print(string_input[::-1])
+
+############################### END OF TASK 5  ##############################################
+
+############################### LAB-01 TASK-06 ##############################################
+
+# 6 - Ask the user to enter the radius of a circle in order to alert its calculated
+# area and circumference
+
+############################### START  TASK 6  ##############################################
+
+import math
+
+radius = float(input("Enter the radius of the circle: "))
+area = math.pi * radius * radius
+circumference = 2 * math.pi * radius
+
+print(f"Area of circle is: {area}, and its circumference is: {circumference}")
+
+#print(f"Area of circle is: {area}, and its circumference is: {circumference}")
+
+
+
+
+############################### END OF TASK 6  ##############################################
+
+
+
+############################### LAB-01 TASK-07 ##############################################
+
+# 7 - Ask the user for his name then confirm that he has entered his name
+# (not an empty string/integers). then proceed to ask him for his email and
+# print all this data
+# - (Bonus) check if it is a valid email or not
+
+############################### START  TASK 7 ################################################
+
+import re
+
+def validate_name_and_email(username):
+    try:
+        int(username)
+        print("please enter a valid name")
+    except:
+        while len(username) <= 0:
+            print("Please enter a valid name !!")
+            username = input("please enter your name: ")
+
+        else:
+            email = input("Please enter your Email: ")
+            regex = '^[a-z][a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
+            if (re.search(regex, email)):
+                print(f"This is your name {username}, and this is your email {email}")
+            else:
+                print("Invalid Email")
+                validate_name_and_email(username)
+
+username = input("please enter your name: ")
+username = username.lower()
+validate_name_and_email(username)
+
+############################### END OF TASK 7 ################################################
+
+
+
+
+
+
+############################### LAB-01 TASK-08 ##############################################
+
+# 8 - Write a program that prints the number of times the string 'iti' occurs in
+
+############################### START  TASK 8  ##############################################
+
+def search_for_iti(string):
+    number_of_iti_word = 0
+    for index in range(len(string) - 2):
+        word = string[index] + string[index+1] + string[index+2]
+        if word == "iti":
+            number_of_iti_word += 1
+
+    print(f"This is the number of iti word in your string: {number_of_iti_word}")
+
+string_input = input("please enter a string which contain an iti word: ")
+search_for_iti(string_input)
+
+
+str.count("iti")
+
+
+
+############################### END OF TASK 8  ##############################################
+
+
+
+
+
